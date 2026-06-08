@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gradient Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>CSS Gradient Generator</h2>
+
+<input type="color" id="color1">
+<input type="color" id="color2">
+
+<button onclick="generateGradient()">Generate</button>
+
+<p id="code"></p>
+
+<script>
+function generateGradient() {
+  let c1 = document.getElementById("color1").value;
+  let c2 = document.getElementById("color2").value;
+
+  let gradient = "linear-gradient(to right, " + c1 + ", " + c2 + ")";
+
+  document.body.style.background = gradient;
+
+  document.getElementById("code").innerText = gradient;
+}
+</script>
+
+</body>
+</html>
